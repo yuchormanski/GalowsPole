@@ -1,0 +1,13 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: black;
+    color: #ededed;
+}
+
+.wrapper {
+    min-width: 960px;
+    min-height: 400px;
+    height: auto;
+    border: 1px solid gray;
+}
