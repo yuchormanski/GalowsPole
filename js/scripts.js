@@ -17,13 +17,12 @@ function buttonMaker() {
     let first = str.shift();
     let last = str.pop();
     let counter = 0;
-    //let p = `<input class="" type="text" id="word" maxlength="1" onChange="" />`; // Create letter places
     let buff = '';
     let allMixed;
 
     for (let i = 0; i < str.length; i++) {   // Create hidden letter places
         counter++;
-        let p = `<input class="" type="text" id="letter" maxlength="1" onkeyup="check()" name="${counter}" value=""/>`; // Create letter places
+        let p = `<input class="" type="text" id="letter${counter}" maxlength="1" onkeyup="check()" name="${counter}" value=""/>`; // Create letter places
         buff += `${p} `
     }
     allMixed = `${first} ${buff} ${last}`
