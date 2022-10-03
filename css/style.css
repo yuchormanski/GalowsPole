@@ -14,12 +14,18 @@ body {
 }
 
 .galows {
-    display: block;
-    width: 60%;
+    display: none;
+    width: 55%;
+    text-align: center;
     margin: 0 auto;
-
+    border: 1px solid rgb(255, 0, 179);
 }
-
+.galowsOn{
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+}
 .galows img {
     width: 60%;
     margin: 0px auto;
@@ -36,7 +42,7 @@ body {
     display: block;
     width: 500px;
     height: 150px;
-    margin: 20px auto 0;
+    margin: 100px auto 0;
     /*border: 1px solid rgb(200, 200, 200);*/
 
 }
@@ -58,7 +64,7 @@ body {
 }
 
 .youFail img {
-    width: 60%;
+    width: 100%;
     margin: 0px auto;
 }
 
@@ -70,7 +76,7 @@ button.playAgain {
 
 .word {
     display: block;
-    margin: 0 0 0 10%;
+    margin: 0 0 0 120px;
 }
 
 input[type=text] {
@@ -91,4 +97,10 @@ input[type=text]:active {
 
 input[type=text]:focus {
     outline: none;
+}
+.winner {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
 }
