@@ -46,5 +46,12 @@
     document.getElementById('testBtn2').addEventListener('click', btnClick);
     document.getElementById('testBtn3').addEventListener('click', btnClick);
 </script> -->
+<script type="text/javascript">
+    var alerted = localStorage.getItem('alerted') || '';
+    if (alerted != 'yes') {
+     alert();
+     localStorage.setItem('alerted','yes');
+    }
+</script>
 
 </html>
