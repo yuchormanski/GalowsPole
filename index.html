@@ -17,10 +17,21 @@
             <button class="" type="button" onclick="buttonMaker()">Play</button>
             <p class="" id='createButtons'></p>
             <p id="checks"></p>
-            <input type="submit" /> 
+            <input type="submit" id="testBtn"/> 
+            <input type="submit" id="testBtn2"/> 
+            <input type="submit" id="testBtn3"/> 
         </div>
     </div>
 </body>
 <script type="text/javascript" src="js/scripts.js"></script>
-
+<script>
+function btnClick(event){
+    console.log(this);
+    console.log(event);
+}
+document.getElementById('testBtn').addEventListener('click', btnClick);
+document.getElementById('testBtn').addEventListener('focus', btnClick);
+document.getElementById('testBtn2').addEventListener('click', btnClick);
+document.getElementById('testBtn3').addEventListener('click', btnClick);
+</script>
 </html>

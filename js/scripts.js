@@ -1,19 +1,10 @@
 
 function buttonMaker() {
-    var str = '';
-    let theWord = '';
-    get_random()
+    let words = fetchAllWords().toLowerCase().split(' ');
+    var theWord = getRandom(words);
 
-    function get_random() {             // Randomize input words
-        allWords()
-        let list = str.split(' ');
-        theWord = list[Math.floor((Math.random() * list.length))];
-        return theWord;
-        //console.log(theWord);
-    }
 
-    word = theWord.toLowerCase();
-    str = word.split('')
+    str = theWord.split('')
     let first = str.shift();
     let last = str.pop();
     let counter = 0;
@@ -22,7 +13,7 @@ function buttonMaker() {
 
     for (let i = 0; i < str.length; i++) {   // Create hidden letter places
         counter++;
-        let p = `<input class="" type="text" id="letter${counter}" maxlength="1" onkeyup="check()" name="${counter}" value=""/>`; // Create letter places
+        let p = `<input class="" type="text" id="letter${counter}" maxlength="1" onkeyup="check(${counter})" name="${counter}" value=""/>`; // Create letter places
         buff += `${p} `
     }
     allMixed = `${first} ${buff} ${last}`
@@ -31,16 +22,21 @@ function buttonMaker() {
 
 
     // Input words list
-    function allWords() {
-        str = 'заек Катерица Лалугер Лисица Котка Невестулка Мишка Сръндак Козел Коза Подковонос';
+    function fetchAllWords() {
+        return 'заек Катерица Лалугер Лисица Котка Невестулка Мишка Сръндак Козел Коза Подковонос';
+    }
+
+    // Randomize input words
+    function getRandom(list) {             
+        return list[Math.floor((Math.random() * list.length))];
     }
 }
 
-function check(){
-    
-    let index = document.getElementById("letter").name;
-    let char = document.getElementById("letter").value;
-    if(char === word[index]){
+function check(el) {
+    // console.log(el);
+    let index = document.getElementById("letter"+el).name;
+    let char = document.getElementById("letter"+el).value;
+    if(char === theWord[index]){
         document.getElementById("checks").innerHTML = "ok";
     }
 
