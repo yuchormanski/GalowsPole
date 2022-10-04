@@ -52,7 +52,7 @@ function check(el) {
 		// }
 		//console.log(el);
 		//console.log(char.charCodeAt());
-		//console.log(fail);
+		console.log(`fail - ${fail}`);
 		//console.log(theWord.length);
 
 		if (char !== theWord[index]) {
@@ -131,7 +131,7 @@ function check(el) {
 
 	if (wordCheck === userCheck) {
 		document.getElementById("yFail").innerHTML = `<img class="fullImage" src="img/winner.png" alt=""/>`;
-		//console.log('OK');
+		console.log('OK');
 	}
 }
 
