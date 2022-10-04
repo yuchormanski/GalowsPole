@@ -14,7 +14,7 @@ function buttonMaker() {
 
 	for (let i = 0; i < str.length; i++) {   // Create hidden letter places
 		counter++;
-		let p = `<input type="text" id="letter${counter}" maxlength="1" onkeyup="check(${counter})" name="${counter}" value="" style="font-size: 30px;" autocapitalize="none"/>`; // Create letter places  onkeyup
+		let p = `<input type="text" id="letter${counter}" maxLength="1" onkeyup="check(${counter})" name="${counter}" value="" style="font-size: 30px;" autocapitalize="none"/>`; // Create letter places  onkeyup
 		buff += `${p} `
 	}
 	allMixed = `${first} ${buff} ${last}`
@@ -22,7 +22,7 @@ function buttonMaker() {
 
 	// Input words list
 	function fetchAllWords() {
-		return 'заек Катерица Лисица Котка кон Лалугер Невестулка Мишка Сръндак Козел Коза Подковонос лъв Вълк леопард Хиена мечка Гепард панда ';
+		return 'заек Катерица Лисица Котка кон Лалугер Невестулка Мишка Сръндак Козел Коза Подковонос лъв Вълк леопард Хиена мечка Гепард панда';
 	}
 
 	// Randomize input words

@@ -8,20 +8,32 @@
     <title>Gallows Pole</title>
     <link href="css/common.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- <link href="css/mediaStyle.css" rel="stylesheet" type="text/css"> -->
+
 </head>
 
 <body>
     <div class="wrapper">
         <!-- images div -->
 		<div class="galowsParts">
-            <p class="youFail" id="yFail"></p>
+            <p class="youFail" id="yFail"><img src="img/rope2.png" class="headImg" /></p>
         </div>
         <div id="winningBlock" class="winner"></div>
         <!-- main game div -->
         <div class="gamePanel">
             <p id="theWord"></p>
             <p class="word" id='createButtons'></p>
+            <script>
+                $(".inputs").keyup(function () {
+                    if (this.value.length == this.maxLength) {
+                      $(this).next('.inputs').focus();
+                    }
+                });
+                </script>
             <p id="checks"></p>
+        </div>
+        <div class="galows" id="response">
+            <h3>Try Again!</h3>    
         </div>
 
         <!-- buttons div -->
@@ -30,9 +42,7 @@
 			<button class="playAgain left" type="button" onclick="buttonMaker()">Play</button>
 		</div>
 
-        <div class="galows" id="response">
-            <h3>Try Again!</h3>    
-        </div>
+        
         
     </div><!-- end wrapper -->
 </body>

@@ -9,7 +9,6 @@ body {
     min-height: 400px;
     height: auto;
     margin: 20px 0 0 20px;
-    border-top: 1px solid rgb(200, 200, 200);
     padding: 10px;
 }
 
@@ -20,12 +19,14 @@ body {
     margin: 0 auto;
     border: 1px solid rgb(255, 0, 179);
 }
-.galowsOn{
+
+.galowsOn {
     display: block;
     width: 55%;
     margin: 0 auto;
     text-align: center;
 }
+
 .galows img {
     width: 60%;
     margin: 0px auto;
@@ -42,7 +43,7 @@ body {
     display: block;
     width: 500px;
     height: 150px;
-    margin: 100px auto 0;
+    margin: 200px auto 0;
     /*border: 1px solid rgb(200, 200, 200);*/
 
 }
@@ -55,7 +56,7 @@ body {
     display: block;
     width: 500px;
     height: 50px;
-    margin: 10px auto;
+    margin: 100px auto;
 }
 
 .youFail {
@@ -64,8 +65,15 @@ body {
 }
 
 .youFail img {
-    width: 100%;
+    display: block;
+    width: 70%;
     margin: 0px auto;
+}
+.youFail img.headImg{
+    max-width: 800px;
+    margin: 0px 0 0 30px;
+    position: absolute;
+    top: 0;
 }
 
 button.playAgain {
@@ -98,9 +106,80 @@ input[type=text]:active {
 input[type=text]:focus {
     outline: none;
 }
+
 .winner {
     display: block;
     width: 500px;
     margin: 0 auto;
     text-align: center;
+}
+
+
+
+/* -----     media queries ----*/
+
+/* Small devices (landscape phones, 576px and up) */
+
+/* @media (min-width: 576px) {} */
+
+/* Medium devices (tablets, 768px and up) */
+
+/* @media (min-width: 768px) {} */
+
+/* Large devices (desktops, 992px and up) */
+
+/* @media (min-width: 992px) {} */
+
+/* // Extra large devices (large desktops, 1200px and up) */
+
+/* @media (min-width: 1200px) {} */
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        border: none;
+        margin: 0;
+    }
+
+
+
+    .galowsParts {
+        width: 339px;
+    }
+
+    .gamePanel {
+        width: 339px;
+        height: 50px;
+        border: 1px solid rgb(200, 200, 200);
+        border-radius: 3px;
+        margin: 80px auto 0;
+    }
+
+    .word {
+        display: block;
+        margin: -28px auto 0 20px;
+    }
+
+    .galowsOn {
+        margin: 20px auto;
+    }
+
+    .winner {
+        width: 339px;
+    }
+
+    .youFail {
+        width: 339px;
+    }
+    .youFail img.headImg{
+        margin: 0px 0 0 70px;
+        position: absolute;
+        top: 0;
+    }
+
+    .buttons {
+        width: 339px;
+        /* position: absolute;
+        bottom: 10px; */
+        margin: 30px auto 0;
+    }
 }
